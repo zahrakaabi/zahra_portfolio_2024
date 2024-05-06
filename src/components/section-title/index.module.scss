@@ -1,0 +1,12 @@
+@import '../../shared/styles/styles.variables.scss';
+
+.sectionTitle {
+    margin-bottom: $__seperat_text;
+
+    h6 {
+        font-weight: 400;
+        font-size: $fz-primary;
+        font-family: $ff-primary;
+        color: $section-title-clr;
+    }
+}

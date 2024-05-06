@@ -1,0 +1,62 @@
+@import '../../shared/styles/styles.variables.scss';
+
+.selectedWorkContainer {
+    .project {
+        $__translateX : 1rem;
+
+        padding: 4rem 0;
+        transition: all 0.2s;
+        border-top: 0.1rem solid #e5e7eb;
+    
+        &:last-of-type {
+            margin-bottom: $__seperat_text;
+            border-bottom: 0.1rem solid #e5e7eb;
+        }
+    
+        &:hover {
+            h2 {
+                opacity: 0.2;
+                transform: translateX($__translateX);
+            }
+
+            p {
+                opacity: 0.2;
+                transform: translate(calc(0.6rem + $__translateX), -0.7rem);
+            }
+
+            .project__arrow {
+                transform: translateX(-$__translateX);
+            }
+        }
+    
+        &__name {
+            h2, p {
+                font-weight: 400;
+                transition: all 0.4s;
+                color: $__color-text;
+                font-family: $ff-primary;
+            }
+
+            h2 {
+                font-size: 14vw;
+
+                @media screen and (min-width: 520px) {
+                    font-size: 8rem;
+                }
+            }
+
+            p {
+                font-size: 1.5rem;
+                transform: translateX(0);
+
+                @media screen and (min-width: 520px) {
+                    transform: translate(0.6rem, -0.7rem);
+                }
+            }
+        }
+
+        &__arrow {
+            transition: 0.4s ease;
+        }
+    }
+}

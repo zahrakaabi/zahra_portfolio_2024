@@ -1,0 +1,11 @@
+@import '../../shared/styles/styles.variables.scss';
+
+.ctaButton {
+    button {
+        border: none;
+        border-radius: 50%;
+        color: $theme-light-clr;
+        width: min(20rem, 15rem);
+        height: min(20rem, 15rem);
+    }
+}
