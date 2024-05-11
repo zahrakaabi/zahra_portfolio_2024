@@ -15,7 +15,7 @@
     
         &:hover {
             h2 {
-                opacity: 0.2;
+                opacity: 0.3;
                 transform: translateX($__translateX);
             }
 
@@ -41,12 +41,12 @@
                 font-size: 14vw;
 
                 @media screen and (min-width: 520px) {
-                    font-size: 8rem;
+                    font-size: 7rem;
                 }
             }
 
             p {
-                font-size: 1.5rem;
+                font-size: 1.4rem;
                 transform: translateX(0);
 
                 @media screen and (min-width: 520px) {

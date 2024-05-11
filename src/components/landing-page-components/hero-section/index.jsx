@@ -1,21 +1,24 @@
 /* ------------------------------------------------ */
 /*                    DEPENDENCIES                  */
 /* ------------------------------------------------ */
+// Packages
+
 // UI Local Components
-import HeroSection from '../components/landing-page-components/hero-section';
-import SelectedWorkSection from '../components/selected-work-section';
+import Header from '../../../shared/header';
+
+// Styles
+import styles from './index.module.scss';
 
 /* ------------------------------------------------ */
 /*                     COMPONENT                    */
 /* ------------------------------------------------ */
-function Home() {
+function HeroSection() {
   /* ***************** RENDERING ****************** */
   return (
-    <main>
-      <HeroSection />
-      <SelectedWorkSection />
-    </main>
-  );
+    <div className={styles.heroContainer}>
+      <Header />   
+    </div>
+  )
 }
 
-export default Home;
+export default HeroSection;

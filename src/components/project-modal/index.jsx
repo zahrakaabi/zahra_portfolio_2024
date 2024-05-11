@@ -70,7 +70,7 @@ function ProjectModal({modal, projects}) {
                 >
                     <Image 
                       src={`/images/projects/${image}`}
-                      width={300}
+                      width={250}
                       height={0}
                       alt="image"
                     />
