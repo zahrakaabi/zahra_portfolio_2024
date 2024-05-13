@@ -1,3 +1,4 @@
+@import '../../shared/styles/styles.mixins.scss';
 @import '../../shared/styles/styles.variables.scss';
 
 .selectedWorkContainer {
@@ -31,10 +32,9 @@
     
         &__name {
             h2, p {
-                font-weight: 400;
                 transition: all 0.4s;
                 color: $__color-text;
-                font-family: $ff-primary;
+                @include fontStylePrimary;
             }
 
             h2 {

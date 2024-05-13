@@ -1,0 +1,7 @@
+@import './styles.variables.scss';
+
+@mixin fontStylePrimary {
+    font-weight: 400;
+    font-style: normal;
+    font-family: $ff-primary;
+}

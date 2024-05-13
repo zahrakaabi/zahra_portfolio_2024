@@ -1,11 +1,18 @@
+@import '../../shared/styles/styles.mixins.scss';
 @import '../../shared/styles/styles.variables.scss';
 
 .ctaButton {
     button {
-        border: none;
         border-radius: 50%;
-        color: $theme-light-clr;
+        border-width: 0.1em;
+        border-style: solid;
         width: min(20rem, 15rem);
         height: min(20rem, 15rem);
+
+        h6 {
+            font-size: 1.2rem;
+            color: $theme-light-clr;
+            @include fontStylePrimary;
+        }
     }
 }

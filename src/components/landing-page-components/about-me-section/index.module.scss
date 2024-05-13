@@ -1,0 +1,46 @@
+@import '../../../shared/styles/styles.mixins.scss';
+
+.aboutMeContainer {
+    padding-block: 20em 14em;
+
+    .aboutMeContent {
+        h1, p {
+            @include fontStylePrimary;
+        }
+
+        h1 {
+            width: 28ch;
+            font-size: 4.4rem;
+        }
+
+        p {
+            width: 44ch;
+            margin-top: 2rem;
+            font-size: 1.6rem;
+            line-height: 4.2rem;
+        }
+    }
+
+    .aboutMeCTA {
+        $__about-cta-height: 31.2rem;
+
+        width: 28.8rem;
+        height: $__about-cta-height;
+
+        &::before {
+            top: 0;
+            right: 0;
+            content: '';
+            width: 100%;
+            position: absolute;
+            height: $__about-cta-height;
+            background: url('../../../assets/images/icons/about_me_arrow.svg') no-repeat top center;
+        }
+
+        .aboutMeBtn {
+            left: -12em;
+            bottom: 2em;
+            position: absolute;
+        }
+    }
+}

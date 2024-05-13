@@ -1,0 +1,69 @@
+@import '../../../shared/styles/styles.mixins.scss';
+@import '../../../shared/styles/styles.variables.scss';
+
+.heroContainer {
+    $__border-clr: #ebebeb;
+
+    background-color: #F8F8F8;
+    border-bottom: 0.1em solid $__border-clr;
+
+    .guides {
+        top: 0;
+        left: 0;
+        z-index: 0;
+        width: 100%;
+        min-height: 100%;
+        position: absolute;
+
+        div {
+            min-height: 100%;
+            width: calc(100% / 4);
+            border-left: 0.1rem solid $__border-clr;
+
+            &:last-child {
+                border-right: 0.1rem solid $__border-clr;
+            }
+        }
+    }
+
+    .heroContent {
+        $__header-height: 15.5rem;
+
+        min-height: calc(100% - $__header-height);
+
+        h1, h6 {
+            line-height: 1;
+            @include fontStylePrimary;
+        }
+
+        h1 {
+            font-size: 7.2rem;
+        }
+
+        .heroCTABtns {
+            margin-top: 2rem;
+
+            button {
+                &:first-child {
+                    padding: 1rem 3rem;
+                    border-radius: 3rem;
+                    color: $theme-light-clr;
+                    background-color: $primary-clr;
+                }
+
+                &:not(:last-child) {
+                    margin-right: 3.2rem;
+                }
+
+                h6 {
+                    font-size: $fz-primary;
+                }
+            }
+        }
+    }
+
+    .heroContent,
+    .scrollDown {
+        z-index: 1
+    }
+}

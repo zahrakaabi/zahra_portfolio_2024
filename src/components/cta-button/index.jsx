@@ -13,12 +13,21 @@ import styles from './index.module.scss';
 /* ------------------------------------------------ */
 /*                     COMPONENT                    */
 /* ------------------------------------------------ */
-function CtaButton({ buttonValue, bgColor }) {
+function CtaButton({ buttonValue, bgColor, color, borderColor, width, style }) {
   /* ***************** RENDERING ****************** */
   return (
     <Link className={`${styles.ctaButton} flex justify-center`} href="/#">
-        <button className="flex justify-center items-center pointer underlined" style={{backgroundColor: bgColor}} type="button" value={buttonValue}>
-            {buttonValue}
+        <button 
+          className='flex justify-center items-center pointer' 
+          style={{backgroundColor: bgColor, borderColor: borderColor}} 
+          type="button"
+          value={buttonValue}
+        >
+          <h6 className={`${style ? style : ''}`} 
+              style={{width: width ? width : '', color: color}}
+          > 
+            {buttonValue} 
+          </h6>
         </button>
     </Link>
   )
@@ -26,7 +35,11 @@ function CtaButton({ buttonValue, bgColor }) {
 
 CtaButton.propTypes = {
   buttonValue: PropTypes.string.isRequired,
-  bgColor: PropTypes.string.isRequired
+  bgColor: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
+  borderColor: PropTypes.string.isRequired,
+  width: PropTypes.string,
+  style: PropTypes.string
 }
 
 export default CtaButton;

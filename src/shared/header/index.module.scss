@@ -1,10 +1,11 @@
+@import '../styles/styles.mixins.scss';
+
 .headerContainer {
-    padding-block: 1.5rem;
+    padding-block-start: 1.5rem;
 
     h6 {
-        font-weight: 400;
         font-size: 1.6rem;
-        font-family: Roboto;
+        @include fontStylePrimary    
     }
 
     .links {

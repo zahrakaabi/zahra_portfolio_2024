@@ -60,7 +60,7 @@ function SelectedWorkSection() {
                 })}
             </div>
             <ProjectModal modal={modal} projects={projects} />
-            <CtaButton buttonValue='View all'  bgColor='#1C1D20' />
+            <CtaButton buttonValue='View all' bgColor='#1C1D20' color='#ffffff' borderColor="#1C1D20" style='underlined' />
         </>  
     )
 }
