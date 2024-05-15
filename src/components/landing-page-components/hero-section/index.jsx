@@ -4,7 +4,7 @@
 // Packages
 
 // UI Local Components
-import CtaButton from '../../cta-button';
+import CtaButton from '../../../shared/components/cta-button';
 import Header from '../../../shared/header';
 
 // Styles
@@ -32,13 +32,13 @@ function HeroSection() {
         <h1> and front-end development </h1>
 
         <div className={`${styles.heroCTABtns} flex`}>
-          <button className="border-none pointer" type="button" value="view projects"> <h6> View projects </h6> </button>
-          <button className="border-none pointer bg-none underlined" type="button" value="download cv"> <h6> Download CV </h6> </button>
+          <button className="border-none pointer" type="button" value="view projects"> <span> View projects </span> </button>
+          <button className="border-none pointer bg-none underlined" type="button" value="download cv"> <span> Download CV </span> </button>
         </div>
       </div> 
 
       <div className={`${styles.scrollDown} pos-r container`}>
-        <CtaButton buttonValue='Scroll down' bgColor='#FF4D00' color='#ffffff' borderColor='#FF4D00' width='6ch' />
+        <CtaButton buttonValue='Scroll down' fontSize='1.2rem' bgColor='#FF4D00' color='#ffffff' borderColor='#FF4D00' width='6ch' />
       </div>
     </div>
   )

@@ -9,8 +9,8 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 // Local UI Components
-import CtaButton from '../cta-button';
-import SectionTitle from '../section-title';
+import CtaButton from '../../shared/components/cta-button';
+import SectionTitle from '../../shared/components/section-title';
 import ProjectModal from '../project-modal';
 
 // APIs
@@ -60,7 +60,7 @@ function SelectedWorkSection() {
                 })}
             </div>
             <ProjectModal modal={modal} projects={projects} />
-            <CtaButton buttonValue='View all' bgColor='#1C1D20' color='#ffffff' borderColor="#1C1D20" style='underlined' />
+            <CtaButton buttonValue='View all' fontSize='1.2rem' bgColor='#1C1D20' color='#ffffff' borderColor="#1C1D20" style='underlined' />
         </>  
     )
 }

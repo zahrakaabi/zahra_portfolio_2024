@@ -1,0 +1,19 @@
+@import '../../styles/styles.mixins.scss';
+@import '../../styles/styles.variables.scss';
+
+.ctaBtn {
+    border-radius: 50%;
+    border-width: 0.2em;
+    border-style: solid;
+    width: min(20rem, 15rem);
+    height: min(20rem, 15rem);
+
+    a {
+        @include fontStylePrimary;
+
+        img {
+            bottom: -0.1em;
+            left: calc(100% + 0.3em);
+        }
+    }
+}

@@ -4,7 +4,6 @@
 .heroContainer {
     $__border-clr: #ebebeb;
 
-    background-color: #F8F8F8;
     border-bottom: 0.1em solid $__border-clr;
 
     .guides {
@@ -37,6 +36,7 @@
         }
 
         h1 {
+            padding-top: 1rem;
             font-size: 7.2rem;
         }
 

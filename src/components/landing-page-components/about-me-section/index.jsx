@@ -2,10 +2,9 @@
 /*                    DEPENDENCIES                  */
 /* ------------------------------------------------ */
 // Packages
-import Image from 'next/image';
 
 // UI Local Components
-import CtaButton from '../../cta-button';
+import CtaButton from '../../../shared/components/cta-button';
 
 // Styles
 import styles from './index.module.scss';
@@ -23,7 +22,7 @@ function AboutMeSection() {
       </div>
       <div className={`${styles.aboutMeCTA} pos-r`}>
         <div className={styles.aboutMeBtn}>
-          <CtaButton buttonValue='About me' bgColor='transparent' color='#1C1D20' borderColor='#1C1D20' />
+          <CtaButton buttonValue='About me' fontSize='2rem' bgColor='transparent' color='#1C1D20' borderColor='#1C1D20' showArrow />
         </div>
       </div>
     </div>

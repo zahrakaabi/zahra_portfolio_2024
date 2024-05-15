@@ -13,7 +13,7 @@ import styles from './index.module.scss';
 function Header() {
   /* ***************** RENDERING ****************** */
   return (
-    <div className={`${styles.headerContainer} flex justify-between items-center container`}>
+    <nav className={`${styles.headerContainer} flex justify-between items-center container`}>
       <div className={`${styles.logo} flex flex-column`}>
         <h6> Zahra kaabi </h6>
         <h6 className="underlined"> Junior front-end developer </h6>
@@ -24,7 +24,7 @@ function Header() {
         <Link href="/#"><h6> Projects  </h6></Link>
         <Link href="/#"><h6> Services  </h6></Link>
       </div>
-    </div>
+    </nav>
   )
 }
 

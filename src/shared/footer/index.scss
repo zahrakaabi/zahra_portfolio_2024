@@ -1,0 +1,9 @@
+@import '../../shared/styles/styles.variables.scss';
+
+.footerContainer {
+    background-color: $theme-dark-clr;
+
+    .footerContent {
+        padding-block: 3rem;
+    }
+}
