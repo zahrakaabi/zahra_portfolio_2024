@@ -1,17 +1,27 @@
 @import '../styles/styles.mixins.scss';
 
 .headerContainer {
-    padding-block-start: 1.5rem;
+    padding-top: 1.5rem;
+    height: $__header-height;
 
-    h6 {
-        font-size: 1.6rem;
-        @include fontStylePrimary    
+    h1, h6 {
+        @include fontStylePrimary;
+    }
+
+    h1 {
+        font-size: 2em;
+        font-weight: 900;
     }
 
     .links {
         a {
             &:not(:last-child) {
                 margin-right: 3rem;
+            }
+
+            h6 {
+                font-size: 1.6rem;
+                font-weight: 400;  
             }
         }
     }
