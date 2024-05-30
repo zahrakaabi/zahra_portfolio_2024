@@ -51,8 +51,10 @@
 
     .scrollDown {
         h6 {
-            color: #A9A9A9;
-            @include fontStyleSecondary;
+            opacity: 0.4;
+            font-weight: 400;
+            font-size: 1.6rem;
+            @include fontStylePrimary;
 
             span {
                 color: $__color-text;

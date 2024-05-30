@@ -1,46 +1,50 @@
 @import '../../../shared/styles/styles.mixins.scss';
 
 .aboutMeContainer {
-    padding-block: 16em 8em;
+    padding-top: 20em;
 
-    .aboutMeContent {
-        h1, p {
-            @include fontStylePrimary;
-        }
+    h1 {
+        font-size: 4.8rem;
+        font-weight: 700;
+        @include fontStylePrimary;
+    }
 
-        h1 {
-            width: 28ch;
-            font-size: 4.4rem;
-        }
-
-        p {
-            width: 42ch;
-            margin-top: 2rem;
-            font-size: 1.6rem;
-            line-height: 4.2rem;
+    .aboutMeTitle {
+        &::after {
+            content: '(A)';
+            position: absolute;
+            opacity: 0.4;
+            top: 0.2em;
+            right: -1.1em;
+            @include fontStyleSecondary;
         }
     }
 
-    .aboutMeCTA {
-        $__about-cta-height: 31.2rem;
-
-        width: 28.8rem;
-        height: $__about-cta-height;
-
-        &::before {
-            top: 0;
-            right: 0;
-            content: '';
-            width: 100%;
-            position: absolute;
-            height: $__about-cta-height;
-            background: url('../../../assets/images/icons/about_me_arrow.svg') no-repeat top center;
+    .aboutMeContent {
+        h1 {
+            width: 25ch;
+            text-align: justify;
         }
 
-        .aboutMeBtn {
-            left: -12em;
-            bottom: 2em;
-            position: absolute;
+        p {
+            padding-block: 2rem 4rem;
+            width: 35ch;
+            font-size: 2.4rem;
+            font-weight: 400;
+            @include fontStylePrimary;
+        }
+
+        button {
+            span {
+                font-size: 2.4rem;
+                font-weight: 400;
+                @include fontStylePrimary;
+            }
+
+            img {
+                margin-left: 0.8rem;
+                margin-bottom: -0.3rem;
+            }
         }
     }
 }

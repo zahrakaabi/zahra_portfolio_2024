@@ -2,9 +2,9 @@
 @import '../../shared/styles/styles.variables.scss';
 
 .selectedWorkContainer {
-    .project {
-        $__translateX : 1rem;
+    padding-top: 20rem;
 
+    .project {
         padding: 4rem 0;
         transition: all 0.2s;
         border-top: 0.1rem solid #e5e7eb;
@@ -15,48 +15,31 @@
         }
     
         &:hover {
-            h2 {
-                opacity: 0.3;
-                transform: translateX($__translateX);
+            .project__name {
+                h2, p {
+                    opacity: 0.3;
+                }
             }
+        }
 
-            p {
-                opacity: 0.2;
-                transform: translate(calc(0.6rem + $__translateX), -0.7rem);
-            }
+        h2 {
+            font-size: 14vw;
+            @include fontStylePrimary;
 
-            .project__arrow {
-                transform: translateX(-$__translateX);
+            @media screen and (min-width: 520px) {
+                font-size: 7rem;
             }
         }
     
         &__name {
             h2, p {
                 transition: all 0.4s;
-                color: $__color-text;
                 @include fontStylePrimary;
-            }
-
-            h2 {
-                font-size: 14vw;
-
-                @media screen and (min-width: 520px) {
-                    font-size: 7rem;
-                }
             }
 
             p {
                 font-size: 1.4rem;
-                transform: translateX(0);
-
-                @media screen and (min-width: 520px) {
-                    transform: translate(0.6rem, -0.7rem);
-                }
             }
-        }
-
-        &__arrow {
-            transition: 0.4s ease;
         }
     }
 }

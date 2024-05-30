@@ -25,6 +25,7 @@ html {
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  color: $__color-text;
 }
 
 h1,
@@ -63,6 +64,10 @@ button {
     padding-inline: 15px;
   }
 }
+
+.block {
+  display: block;
+} 
 
 .flex {
   display: flex;
@@ -127,11 +132,15 @@ button {
 
 .isVisible {
   opacity: 1;
+  width: auto;
+  height: auto;
   visibility: visible;
   transition: 0.3s ease;
 }
 
 .isHidden {
+  width: 0;
+  height: 0;
   opacity: 0;
   visibility: hidden;
 }

@@ -2,6 +2,10 @@
 /*                    DEPENDENCIES                  */
 /* ------------------------------------------------ */
 // Packages
+import Link from 'next/link';
+
+// APIs
+import { projects } from '@/shared/api/projects';
 
 /* ------------------------------------------------ */
 /*                     COMPONENT                    */
@@ -11,10 +15,10 @@ function Projects() {
   return (
     <main>
         <h1> Hello List of projects </h1>
-        
-        <h2> Project 1 </h2>
-        <h2> Project 2 </h2>
-        <h2> Project 3 </h2>
+        {projects?.map((project) => {
+          const { $id, title } = project;
+          return <Link key={$id} href={`/projects/${$id}`}> {title} </Link>
+        })}
     </main>
   );
 }

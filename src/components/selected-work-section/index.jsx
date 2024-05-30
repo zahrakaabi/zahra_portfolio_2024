@@ -14,7 +14,7 @@ import SectionTitle from '../../shared/components/section-title';
 import ProjectModal from '../project-modal';
 
 // APIs
-import { projects } from '../../app/api/projects';
+import { projects } from '@/shared/api/projects';
 
 // Images
 import RIGHT_ARROW from '../../assets/images/icons/right_arrow.svg';
@@ -27,34 +27,32 @@ import styles from './index.module.scss';
 /* ------------------------------------------------ */
 function SelectedWorkSection() {
     const [modal, setModal] = useState({active: false, index: 0});
-    const PROJECTS_NUMB = 3;
+    const PROJECTS_NUM = 3;
 
     /* **************** RENDERING ***************** */
     return (
         <>
             <div className={`${styles.selectedWorkContainer} container`}>
                 <SectionTitle sectionTitle='Some of my selected work' />
-                {projects?.slice(0,PROJECTS_NUMB)?.map((project, index) => {
-                    const { title, details, src } = project;
+                {projects?.slice(0,PROJECTS_NUM)?.map((project, index) => {
+                    const { $id, title, details, src } = project;
                     return (
-                        <Link className={`${styles.project} flex justify-between items-center pointer`}
+                        <Link className={`${styles.project} block w-screen pointer`}
                             href={src}
                             key={index}
                             target='_blank'
                             onMouseEnter={() => {setModal({active: true, index})}}
                             onMouseLeave={() => {setModal({active: false, index})}}
                         >
-                            <div className={styles.project__name}>
-                                <h2> {title} </h2>
-                                <p> {details} </p>
+                            <div className={`${modal.active && modal.index === index ? 'flex justify-between items-center' : ''}`}>
+                                <h2 className={`${modal.active && modal.index === index ? 'isVisible' : 'isHidden'}`}>
+                                    /{$id} 
+                                </h2>
+                                <div className={styles.project__name}>
+                                    <h2> {title} </h2>
+                                    <p> {details} </p>
+                                </div>
                             </div>
-                            <Image className={`${styles.project__arrow} 
-                                ${modal.active && modal.index === index ? 'isVisible' : 'isHidden'}`}
-                                src={RIGHT_ARROW}
-                                width={60}
-                                height='auto'
-                                alt="arrow_to_see_the_project_details"
-                            />
                         </Link>
                     )
                 })}

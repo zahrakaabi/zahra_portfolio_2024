@@ -1,10 +1,11 @@
 /* ------------------------------------------------ */
 /*                    DEPENDENCIES                  */
 /* ------------------------------------------------ */
-// Packages
+// Package
+import Image from 'next/image';
 
-// UI Local Components
-import CtaButton from '../../../shared/components/cta-button';
+// Images
+import ABOUT_ARROW from '@/assets/images/about-section/about-arrow.svg';
 
 // Styles
 import styles from './index.module.scss';
@@ -16,14 +17,14 @@ function AboutMeSection() {
   /* ***************** RENDERING ****************** */
   return (
     <div className={`${styles.aboutMeContainer} flex justify-between container`}>
-      <div className={`${styles.aboutMeContent}`}>
-        <h1> Together towards helping YOU digitalize and stand out online. </h1>
-        <p> Let&apos;s collaborate to design and develop exceptional, out of the ordinary and responsive websites for YOU! </p>
-      </div>
-      <div className={`${styles.aboutMeCTA} pos-r`}>
-        <div className={styles.aboutMeBtn}>
-          <CtaButton buttonValue='About me' fontSize='2rem' bgColor='transparent' color='#1C1D20' borderColor='#1C1D20' showArrow />
-        </div>
+      <h1 className={`${styles.aboutMeTitle} pos-r`}> Intro </h1>
+      <div className={styles.aboutMeContent}>
+        <h1> Together towards a journey of innovation, helping YOU stand out in the digital era. </h1>
+        <p> Let&apos;s collaborate to design and develop FUTURE-ORIENTED website. </p>
+        <button className='bg-none border-none pointer flex items-end' type='button' value='about'>
+          <span className='underlined'> KNOW MORE ABOUT ZAHRA </span>
+          <Image src={ABOUT_ARROW} alt='about-zahra' />
+        </button>
       </div>
     </div>
   )
