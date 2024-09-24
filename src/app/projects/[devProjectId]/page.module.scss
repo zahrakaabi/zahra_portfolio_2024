@@ -1,0 +1,82 @@
+@import '../../../shared/styles/styles.variables.scss';
+@import '../../../shared/styles/styles.mixins.scss';
+
+.projectDetailsContainer {
+    padding-top: 8rem;
+
+    /*.overlay {
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100vh;
+        position: fixed;
+        z-index: -999;
+        background-size: cover;
+        background-image: url('../../../assets/images/project-details-page/keffeyah.webp');
+    }*/
+
+    .projectdetails {
+        h1,
+        h2,
+        h3,
+        p {
+            line-height: 0.8;
+            color: $__color-text;
+            @include fontStylePrimary;
+        }
+    
+        h1, h2, p {
+            font-weight: 400;
+        }
+    
+        h1 {
+            font-size: 12.8rem;
+            margin-bottom: 1rem;
+        }
+    
+        h2 {
+            font-size: 3.2rem;
+            margin-left: 1rem;
+        }
+    
+        h3 {
+            font-weight: 700;
+            font-size: 2.4rem;
+            margin-bottom: 1rem;
+        }
+    
+        p {
+            width: 40ch;
+            font-size: 1.6rem;
+            text-align: justify;
+    
+            &:first-of-type {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    .projectPlayer {
+        width: 100%;
+        height: 100vh;
+        padding: 10rem 1.5rem;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        div {
+            width: 77%;
+            border-radius: 20px;
+            height: 450px;
+            background: red;
+            position: absolute;
+            top: 10rem;
+            z-index: -1;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}

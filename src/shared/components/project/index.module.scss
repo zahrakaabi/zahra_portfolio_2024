@@ -1,0 +1,27 @@
+@import '../../styles/styles.variables.scss';
+
+.project {
+    width: 100%;
+    padding: 0.8vw 0; //4rem
+    border-top: 0.1rem solid #e5e7eb;
+
+    &:last-of-type {
+        margin-bottom: 2rem;
+        border-bottom: 0.1rem solid #e5e7eb;
+    }
+
+    p{
+        font-size: 5vw;
+        margin: 0px;
+    }
+
+    .imgContainer {
+        width: 0;
+        overflow: hidden;
+
+        img {
+            width: 10vw;
+            height: auto;
+        }
+    }
+}

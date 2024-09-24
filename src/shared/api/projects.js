@@ -5,7 +5,9 @@ export const projects = [
         image: "thunderous.png",
         details: "Designed & developed by zahra kaabi",
         src:"https://github.com/zahrakaabi/thunderous",
-        color: "brown"
+        color: "brown",
+        techs: "React JS | SCSS",
+        description: "An E-commerce website that sells  beauty products using trendy technologies a React JS, with the interpoliration"
     },
     {
         $id: "02",
@@ -13,7 +15,9 @@ export const projects = [
         image: "boho.png",
         details: "Designed by Nora Guas and developed by zahra kaabi",
         src:"https://github.com/zahrakaabi/BOHO-shopping-cart",
-        color: "orange"
+        color: "orange",
+        techs: "Vanilla Javascript | Html | CSS",
+        description: "E-commerce website that sells beauty products"
     },
     {
         $id: "03",
@@ -21,7 +25,9 @@ export const projects = [
         image: "moviehype.png",
         details: "Designed & developed by zahra kaabi",
         src:"https://github.com/zahrakaabi13/Movie-application-usig-react-js",
-        color: "blue"
+        color: "blue",
+        techs: "React JS | Node Js",
+        description: "E-commerce website that sells beauty products"
     },
     {
         $id: "04",
@@ -29,7 +35,9 @@ export const projects = [
         image: "obsession.png",
         details: "Designed & developed by zahra kaabi",
         src:"https://github.com/zahrakaabi13/Chef-d-oeuvre",
-        color: "orange"
+        color: "orange",
+        techs: "React JS | Node Js",
+        description: "E-commerce website that sells beauty products"
     },
     {
         $id: "05",
@@ -37,6 +45,8 @@ export const projects = [
         image: "watchNgo.png",
         details: "Designed & developed by zahra kaabi",
         src:"https://github.com/zahrakaabi/watchNgo",
-        color: "red"
+        color: "red",
+        techs: "Vanilla Javscript | Html | CSS",
+        description: "E-commerce website that sells beauty products"
     }
 ]

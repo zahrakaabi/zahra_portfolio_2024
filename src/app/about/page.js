@@ -2,17 +2,18 @@
 /*                    DEPENDENCIES                  */
 /* ------------------------------------------------ */
 // Packages
+import About from "@/components/about-page-components";
 
 /* ------------------------------------------------ */
 /*                     COMPONENT                    */
 /* ------------------------------------------------ */
-function About() {
+function AboutPage() {
     /* ***************** RENDERING ****************** */
     return (
       <main>
-          <h1> Hello About </h1>
+        <About />
       </main>
     );
   }
   
-export default About;
+export default AboutPage;

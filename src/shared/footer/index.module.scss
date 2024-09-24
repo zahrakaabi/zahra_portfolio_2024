@@ -1,0 +1,31 @@
+@import '../../shared/styles/styles.variables.scss';
+
+.footerContainer {
+    background-color: $theme-dark-clr;
+
+    .footerContent {
+        padding-block: 3rem;
+
+        .socials {
+            h5 {
+                font-size: 0.8rem;
+                color: #fff;
+                font-family: Roboto;
+                font-weight: 400;
+                line-height: 1;
+            }
+
+            ul li {
+                &:not(:last-child) {
+                    margin-right: 1.5rem;
+                }
+
+                a {
+                    font-size: 1.6rem;
+                    color: #fff;
+                    font-family: Roboto;
+                }
+            }
+        }
+    }
+}

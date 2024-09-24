@@ -5,7 +5,7 @@
 import Image from 'next/image';
 
 // Images
-import ABOUT_ARROW from '@/assets/images/about-section/about-arrow.svg';
+import ABOUT_ARROW from '@/assets/images/home-page/about-section/about-arrow.svg';
 
 // Styles
 import styles from './index.module.scss';

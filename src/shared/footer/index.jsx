@@ -13,10 +13,16 @@ function Footer() {
   /* ***************** RENDERING ****************** */
   return (
     <footer className={`${styles.footerContainer} container`}>
-        <div className={`${styles.footerContent} flex justify-between `}>
-            <div className={styles.footerEmail}>
-                <h4> Let&apos;s get in touch </h4>
-                <h6> kaabizahra@gmail.com </h6>
+        <div className={styles.footerContent}>
+            <div className={`${styles.socials} flex justify-between items-center`}>
+                <h5> Copyright © Zahra Portfolio | Designed & Developed by ZAHRA KAABI </h5>
+                <ul className='flex'>
+                  <li> <a href='' target='blank'> DRIBBBLE </a> </li>
+                  <li> <a href='' target='blank'> MEDIUM </a> </li>
+                  <li> <a href='' target='blank'> GITHUB 1 </a> </li>
+                  <li> <a href='' target='blank'> GITHUB 2 </a> </li>
+                  <li> <a href='' target='blank'> LINKEDIN </a> </li>
+                </ul>
             </div>
         </div>
     </footer>

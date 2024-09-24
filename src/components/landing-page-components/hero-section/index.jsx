@@ -4,11 +4,8 @@
 // Packages
 import Image from 'next/image';
 
-// UI Local Components
-import Header from '@/shared/header';
-
 // Images
-import FREE_PALESTINE from '@/assets/images/hero-section/palestin_icon.svg';
+import FREE_PALESTINE from '@/assets/images/home-page/hero-section/palestin_icon.svg';
 
 // Styles
 import styles from './index.module.scss';
@@ -20,8 +17,6 @@ function HeroSection() {
   /* ***************** RENDERING ****************** */
   return (
     <div className={`${styles.heroContainer} container`}>
-      <Header />  
-
       <div className={`${styles.heroContent} flex flex-column justify-center`}>
         <span className='flex items-end'>
           <Image src={FREE_PALESTINE} alt='free_palestine' />
@@ -40,7 +35,7 @@ function HeroSection() {
 
       <div className={`${styles.scrollDown} flex justify-between`}>
         <h6> SCROLL DOWN </h6>
-        <h6> Based in <span> Tunisia </span> </h6>
+        <h6> BASED IN <span> TUNISIA </span> </h6>
       </div>
     </div>
   )

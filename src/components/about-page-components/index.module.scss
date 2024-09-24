@@ -1,0 +1,118 @@
+.aboutPage {
+    /*$text: #242424;
+    $background: #fff;*/ //white + black
+
+    /*$text: #f00;
+    $background: #040f49;*/ //blue + red
+
+    /*$text: #D6FF00;
+    $background: #E203AB;*/ // pink + yello
+
+    /*$text: #f48f0b;
+    $background: #0b41f4;*/ // blue + orange
+
+    /*color: $text;
+    background: $background;*/
+
+    .changeMood {
+        padding: 0.5rem 1.5rem;
+        border-radius: 5rem;
+        border-width: 0.1em;
+        border-style: solid;
+        background: transparent;
+        font-size: 1.5rem;
+        font-family: roboto;
+        font-style: normal;
+        font-weight: 400;
+        margin-top: 4%;
+        cursor: pointer;
+    }
+
+    .heading {
+        margin: 2% auto; 
+        font-size: 7vw;
+        font-family: roboto;
+        font-style: normal;
+        font-weight: 700;
+        width: 18ch;
+        line-height: 1;
+    }
+
+    .sayingHello {
+        p { 
+            font-size: 1.8rem;
+            font-family: roboto;
+            font-style: normal;
+            font-weight: 400;
+            width: fit-content;
+
+            span {
+                width: 1.2rem;
+                height: 1.2rem;
+                margin: 0 0.5em 0.2em 0
+            }
+        }
+
+        img  {
+            width: 35rem;
+            height: 45rem;
+            object-fit: cover;
+        }
+    }
+
+    p {
+        font-size: 1.6rem;
+        font-family: roboto;
+        font-style: normal;
+        font-weight: 400;
+        width: 70ch;
+        margin-top: 3%;
+    }
+
+    .packageWrapper {
+        margin: 10% auto 15% auto;
+
+        h2 {
+            font-size: 4.8rem;
+            font-family: roboto;
+            font-style: normal;
+            font-weight: 400;
+            margin-bottom: 6rem;
+        }
+
+        .packageContainer {
+            gap: 3%; 
+
+            .package {
+                width: calc(100% / 3);
+
+                div {
+                    font-size: 1.2rem;
+                    font-family: roboto;
+                    font-style: normal;
+                    font-weight: 400;
+                    padding-bottom: 2.4rem;
+                    border-bottom-width: 0.1em;
+                    border-bottom-style: solid;
+                    opacity: 0.5
+                }
+
+                h3 {
+                    font-size: 2.9rem;
+                    font-family: roboto;
+                    font-style: normal;
+                    font-weight: 400;
+                    padding: 4rem 0;
+                }
+
+                p {
+                    font-size: 1.6rem;
+                    font-family: roboto;
+                    font-style: normal;
+                    font-weight: 400;
+                    width: 42ch
+                }
+            }
+        }
+    }
+}
