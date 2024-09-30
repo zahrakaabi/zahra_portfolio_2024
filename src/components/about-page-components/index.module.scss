@@ -1,19 +1,4 @@
 .aboutPage {
-    /*$text: #242424;
-    $background: #fff;*/ //white + black
-
-    /*$text: #f00;
-    $background: #040f49;*/ //blue + red
-
-    /*$text: #D6FF00;
-    $background: #E203AB;*/ // pink + yello
-
-    /*$text: #f48f0b;
-    $background: #0b41f4;*/ // blue + orange
-
-    /*color: $text;
-    background: $background;*/
-
     .changeMood {
         padding: 0.5rem 1.5rem;
         border-radius: 5rem;
@@ -26,6 +11,10 @@
         font-weight: 400;
         margin-top: 4%;
         cursor: pointer;
+
+        @media (max-width: 720px) {
+            margin-top: 3rem;
+        }
     }
 
     .heading {
@@ -36,6 +25,12 @@
         font-weight: 700;
         width: 18ch;
         line-height: 1;
+
+        @media (max-width: 720px) {
+            width: 100%;
+            font-size: 9vw;
+            margin: 2rem auto;
+        }
     }
 
     .sayingHello {
@@ -57,6 +52,10 @@
             width: 35rem;
             height: 45rem;
             object-fit: cover;
+
+            @media (max-width: 480px) {
+                width: 100%
+            }
         }
     }
 
@@ -67,6 +66,11 @@
         font-weight: 400;
         width: 70ch;
         margin-top: 3%;
+
+        @media (max-width: 720px) {
+            width: 100%;
+            margin-top: 1.5rem;
+        }
     }
 
     .packageWrapper {

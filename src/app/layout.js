@@ -14,7 +14,7 @@ import Header from '@/shared/header';
 import About from '@/components/about-page-components';
 
 // _hepers
-import { MOOD_OPTIONS } from '../_helpers/_mood-options';
+import { MOOD_OPTIONS } from '../_helpers/_APIs/_mood-options';
 
 // Styles
 import '../shared/styles/styles.globals.scss';

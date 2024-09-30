@@ -4,7 +4,12 @@
 /*                                DEPENDENCIES                                */
 /* -------------------------------------------------------------------------- */
 // Packages
-import Image from 'next/image';
+
+// _helpers
+import { PACKAGE_OFFER_DETAILS } from '@/_helpers/_APIs/_package-offer-details';
+
+// UI Local Components
+import BlurImage from '@/_helpers/blur-image';
 
 // Images
 import SAYING_HELLO_1 from '@/assets/images/about-page/saying_hello_3.gif'; 
@@ -12,32 +17,8 @@ import SAYING_HELLO_1 from '@/assets/images/about-page/saying_hello_3.gif';
 // Styles
 import styles from './index.module.scss';
 
-/* ------------------------------------------------ */
-/*              PACKAGE OFFER DETAILS               */
-/* ------------------------------------------------ */
-const PACKAGE_OFFER_DETAILS = [
-  {
-    $id: '00000001chg',
-    order: '01',
-    title: 'Web Design',
-    description: 'With my good taste of art and my ability to design, I deliver eye-catching digital web designs. Figma is my favorite.'
-  },
-  {
-    $id: '00000002chg',
-    order: '02',
-    title: 'Development',
-    description: 'I build websites from scratch that fit seamlessly with design. My focus is on front-end development. Next, REACT and Angular are my favorites.'
-  },
-  {
-    $id: '00000003chg',
-    order: '03',
-    title: 'The full package',
-    description: "A website from concept to implementation, that’s why they prefer to work with me. My sense for design and my development skills enable me to create stand out projects."
-  }
-];
-
 /* -------------------------------------------------------------------------- */
-/*                                    ABOUT                                   */
+/*                               ABOUT COMPONENT                              */
 /* -------------------------------------------------------------------------- */
 function About({ handleMood, mood }) {
 /* -------------------------------- CONSTANTS ------------------------------- */
@@ -45,7 +26,7 @@ function About({ handleMood, mood }) {
     $id: '0000000001moodOpetions',
     text_color: '#242424',
     background_color: '#fff',
-    image: SAYING_HELLO_1, 
+    image: SAYING_HELLO_1 // Default mood
   };
 
 /* -------------------------------- RENDERING ------------------------------- */
@@ -70,7 +51,7 @@ function About({ handleMood, mood }) {
             <span className='d-block' style={{ backgroundColor: text_color }}></span> 
             I&apos;m Zahra 
           </p>
-          <Image src={image} alt='saying HELLO image' priority={true} />
+          <BlurImage image={image} />
         </div>
         <p className='text-center'>
           Zahra Kaabi is a YOUNG Front-end Developer and a UI Web Designer GIRL. “I always loved the combination of 
