@@ -22,7 +22,7 @@ const BlurImage = ({ image }) => {
                 src={image}
                 alt="image"
                 priority={true}
-                onLoadingComplete={() => setLoading(false)}
+                onLoad={() => setLoading(false)}
             />
         </div>
     )

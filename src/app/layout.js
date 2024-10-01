@@ -6,7 +6,7 @@
 // Packages
 import Head from 'next/head';
 import { usePathname } from 'next/navigation';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 // UI Local Components
 import Footer from '@/shared/footer';
@@ -23,13 +23,22 @@ import '../shared/styles/styles.globals.scss';
 /*                     COMPONENT                    */
 /* ------------------------------------------------ */
 function RootLayout({ children }) {
+  const storedMoodIndex = localStorage.getItem('moodIndex');
+  const INITIAL_MOOD_INDEX = storedMoodIndex ? parseInt(storedMoodIndex, 10) : 0
   /* ------------------- HOOKS -------------------- */ 
   const pathname = usePathname();
-  const [moodIndex, setMoodIndex] = useState(0);
+  const [moodIndex, setMoodIndex] = useState(INITIAL_MOOD_INDEX);
+
+  const isAboutPage = pathname === '/about';
+
+  useEffect(() => {
+    localStorage.setItem('moodIndex', moodIndex);
+  }, [moodIndex]);
 
   /* ----------------- CONSTANTS ----------------- */ 
-  const handleMood = () => setMoodIndex((prevMoodIndex) => (prevMoodIndex < MOOD_OPTIONS.length - 1 ? prevMoodIndex + 1 : 0));
-  const isAboutPage = pathname === '/about';
+  const handleMood = () => {
+    setMoodIndex((prevMoodIndex) => (prevMoodIndex < MOOD_OPTIONS.length - 1 ? prevMoodIndex + 1 : 0));
+  };
 
   /* ***************** RENDERING ****************** */
   return (
@@ -44,7 +53,7 @@ function RootLayout({ children }) {
           mood={MOOD_OPTIONS[moodIndex]}
         />
         <main>
-          {isAboutPage ? <About mood={MOOD_OPTIONS[moodIndex]} handleMood={handleMood} /> : children}
+          {isAboutPage ? <About handleMood={handleMood} mood={MOOD_OPTIONS[moodIndex]} /> : children}
         </main>
         <Footer />
       </body>

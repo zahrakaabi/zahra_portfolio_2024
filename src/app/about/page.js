@@ -9,11 +9,7 @@ import About from "@/components/about-page-components";
 /* ------------------------------------------------ */
 function AboutPage() {
     /* ***************** RENDERING ****************** */
-    return (
-      <main>
-        <About />
-      </main>
-    );
+    return <About />;
   }
   
 export default AboutPage;

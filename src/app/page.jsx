@@ -12,11 +12,11 @@ import SelectedWorkSection from '../components/selected-work-section';
 function Home() {
   /* ***************** RENDERING ****************** */
   return (
-    <main>
+    <>
       <HeroSection />
       <AboutMeSection />
       <SelectedWorkSection />
-    </main>
+    </>
   );
 }
 

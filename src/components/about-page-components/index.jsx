@@ -18,16 +18,21 @@ import SAYING_HELLO_1 from '@/assets/images/about-page/saying_hello_3.gif';
 import styles from './index.module.scss';
 
 /* -------------------------------------------------------------------------- */
+/*                               DEFAULT VALUES                               */
+/* -------------------------------------------------------------------------- */
+const DEFAULT_MOOD = {
+  $id: '0000000001moodOpetions',
+  text_color: '#242424',
+  background_color: '#fff',
+  image: SAYING_HELLO_1
+};
+
+/* -------------------------------------------------------------------------- */
 /*                               ABOUT COMPONENT                              */
 /* -------------------------------------------------------------------------- */
 function About({ handleMood, mood }) {
 /* -------------------------------- CONSTANTS ------------------------------- */
-  const { text_color, background_color, image } = mood || {
-    $id: '0000000001moodOpetions',
-    text_color: '#242424',
-    background_color: '#fff',
-    image: SAYING_HELLO_1 // Default mood
-  };
+  const { text_color, background_color, image } = mood || DEFAULT_MOOD;
 
 /* -------------------------------- RENDERING ------------------------------- */
   return (
