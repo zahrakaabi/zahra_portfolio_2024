@@ -59,7 +59,7 @@ function About({ handleMood, mood }) {
         </p>
         <div className={`${styles.packageWrapper} w-screen`}>
           <h2> I can help you with ... </h2>
-          <div className={`${styles.packageContainer} flex`}>
+          <div className={`${styles.packageContainer} flex flex-wrap`}>
             {PACKAGE_OFFER_DETAILS.map((item) => {
               const { $id, order, title, description } = item;
               return (
