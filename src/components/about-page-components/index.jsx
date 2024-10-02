@@ -56,7 +56,9 @@ function About({ handleMood, mood }) {
             <span className='d-block' style={{ backgroundColor: text_color }}></span> 
             I&apos;m Zahra 
           </p>
-          <BlurImage image={image} />
+          <div className={styles.imageContainer}>
+            <BlurImage image={image} />
+          </div>
         </div>
         <p className='text-center'>
           Zahra Kaabi is a YOUNG Front-end Developer and a UI Web Designer GIRL. “I always loved the combination of 

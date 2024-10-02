@@ -18,6 +18,7 @@ import { MOOD_OPTIONS } from '../_helpers/_APIs/_mood-options';
 
 // Styles
 import '../shared/styles/styles.globals.scss';
+import styles from '../components/about-page-components/index.module.scss';
 
 /* ------------------------------------------------ */
 /*                     COMPONENT                    */
@@ -37,7 +38,13 @@ function RootLayout({ children }) {
 
   /* ----------------- CONSTANTS ----------------- */ 
   const handleMood = () => {
-    setMoodIndex((prevMoodIndex) => (prevMoodIndex < MOOD_OPTIONS.length - 1 ? prevMoodIndex + 1 : 0));
+    const imageContainer = document.querySelector(`.${styles.imageContainer}`);
+    imageContainer.classList.add('fade-out');
+
+    setTimeout(() => {
+      setMoodIndex((prevMoodIndex) => (prevMoodIndex < MOOD_OPTIONS.length - 1 ? prevMoodIndex + 1 : 0));
+      imageContainer.classList.remove('fade-out');
+    }, 500);
   };
 
   /* ***************** RENDERING ****************** */

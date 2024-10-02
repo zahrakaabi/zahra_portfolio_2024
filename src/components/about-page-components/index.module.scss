@@ -1,4 +1,10 @@
+.headerContainer {
+    transition: background-color 0.5s ease-in, color 0.5s ease-in-out;
+};
+
 .aboutPage {
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+
     .changeMood {
         padding: 0.5rem 1.5rem;
         border-radius: 5rem;
@@ -48,13 +54,26 @@
             }
         }
 
-        img  {
+        .imageContainer {
+            opacity: 1;
             width: 35rem;
-            height: 45rem;
-            object-fit: cover;
-
+            height: 100%;
+            overflow: hidden;
+            transition: opacity 0.5s ease-in-out;
+        
             @media (max-width: 480px) {
                 width: 100%
+            }
+        
+            &.fade-out {
+                opacity: 0;
+            }
+        
+            img {
+                width: 100%;
+                height: 45rem;
+                object-fit: cover;
+                transition: 0.5s ease-in-out;
             }
         }
     }

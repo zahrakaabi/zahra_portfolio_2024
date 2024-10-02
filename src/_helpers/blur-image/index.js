@@ -17,7 +17,7 @@ const BlurImage = ({ image }) => {
 
 /* -------------------------------- RENDERING ------------------------------- */
     return (
-        <div className={`${styles.imageWrapper} ${loading ? styles.loading : ''}`}>
+        <div className={`${loading ? styles.loading : ''} pos-r`}>
             <Image
                 src={image}
                 alt="image"
