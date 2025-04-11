@@ -1,6 +1,9 @@
 /* ------------------------------------------------ */
 /*                    DEPENDENCIES                  */
 /* ------------------------------------------------ */
+// Packages
+import { Suspense } from "react";
+
 // UI Local Components
 import WorkPage from "@/components/work-page-components";
 
@@ -9,7 +12,11 @@ import WorkPage from "@/components/work-page-components";
 /* ------------------------------------------------ */
 function Projects() {
   /* ***************** RENDERING ****************** */
-  return <WorkPage />;
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <WorkPage />
+    </Suspense>
+  );
 }
 
 export default Projects;
