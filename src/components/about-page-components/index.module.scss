@@ -3,6 +3,7 @@
 };
 
 .aboutPage {
+    padding-top: 5rem;
     transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 
     .changeMood {
@@ -11,12 +12,10 @@
         border-width: 0.1em;
         border-style: solid;
         background: transparent;
-        font-size: 1.5rem;
-        font-family: roboto;
-        font-style: normal;
-        font-weight: 400;
         margin-top: 4%;
         cursor: pointer;
+        font: normal 400 1.5rem / 1 roboto;
+        animation: pulse 1.5s infinite;
 
         @media (max-width: 720px) {
             margin-top: 3rem;
@@ -24,13 +23,9 @@
     }
 
     .heading {
-        margin: 2% auto; 
-        font-size: 7vw;
-        font-family: roboto;
-        font-style: normal;
-        font-weight: 700;
-        width: 18ch;
-        line-height: 1;
+        margin: 3% auto; 
+        font: normal 700 5vw/1 roboto;
+        width: 20ch;
 
         @media (max-width: 720px) {
             width: 100%;
@@ -41,11 +36,8 @@
 
     .sayingHello {
         p { 
-            font-size: 1.8rem;
-            font-family: roboto;
-            font-style: normal;
-            font-weight: 400;
             width: fit-content;
+            font: normal 400 1.8rem / 1.2 roboto;
 
             span {
                 width: 1.2rem;
@@ -56,7 +48,7 @@
 
         .imageContainer {
             opacity: 1;
-            width: 35rem;
+            width: 32rem;
             height: 100%;
             overflow: hidden;
             transition: opacity 0.5s ease-in-out;
@@ -79,12 +71,9 @@
     }
 
     p {
-        font-size: 1.6rem;
-        font-family: roboto;
-        font-style: normal;
-        font-weight: 400;
         width: 70ch;
         margin-top: 3%;
+        font: normal 400 1.6rem / 1.5 roboto;
 
         @media (max-width: 720px) {
             width: 100%;
@@ -96,10 +85,8 @@
         margin: 10% auto 15% auto;
 
         h2 {
-            font-size: 4.8rem;
-            font-family: roboto;
-            font-style: normal;
             font-weight: 400;
+            font: normal 400 4.8rem / 1 roboto;
         }
 
         .packageContainer {
@@ -117,14 +104,11 @@
                 }
 
                 div {
-                    font-size: 1.2rem;
-                    font-family: roboto;
-                    font-style: normal;
-                    font-weight: 400;
                     padding-bottom: 2.4rem;
                     border-bottom-width: 0.1em;
                     border-bottom-style: solid;
                     opacity: 0.5;
+                    font: normal 400 1.2rem / 1 roboto;
 
                     @media (max-width: 720px) {
                         margin-bottom: 1.5rem;
@@ -132,11 +116,8 @@
                 }
 
                 h3 {
-                    font-size: 2.9rem;
-                    font-family: roboto;
-                    font-style: normal;
-                    font-weight: 400;
                     padding: 4rem 0;
+                    font: normal 400 2.9rem / 1 roboto;
 
                     @media (max-width: 720px) {
                         padding: 1.5rem 0;
@@ -144,11 +125,8 @@
                 }
 
                 p {
-                    font-size: 1.6rem;
-                    font-family: roboto;
-                    font-style: normal;
-                    font-weight: 400;
                     width: 42ch;
+                    font: normal 400 1.6rem / 1.5 roboto;
 
                     @media (max-width: 1440px) {
                         width: 100%;
@@ -157,5 +135,17 @@
                 }
             }
         }
+    }
+}
+
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
     }
 }

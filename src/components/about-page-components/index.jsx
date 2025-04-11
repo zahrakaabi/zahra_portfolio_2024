@@ -5,11 +5,11 @@
 /* -------------------------------------------------------------------------- */
 // Packages
 
-// _helpers
-import { PACKAGE_OFFER_DETAILS } from '@/_helpers/_APIs/_package-offer-details';
+// _Mocks
+import { PACKAGE_OFFER_DETAILS } from '@/_mock';
 
 // UI Local Components
-import BlurImage from '@/_helpers/blur-image';
+import BlurImage from '@/shared/components/blur-image';
 
 // Images
 import SAYING_HELLO_1 from '@/assets/images/about-page/saying_hello_3.gif'; 
@@ -36,21 +36,21 @@ function About({ handleMood, mood }) {
 
 /* -------------------------------- RENDERING ------------------------------- */
   return (
-    <>
-      <div 
-        className={`${styles.aboutPage} flex items-center flex-column container`}
-        style={{ backgroundColor: background_color, color: text_color }} 
-      >
+    <div className={styles.aboutPage} style={{ backgroundColor: background_color, color: text_color }}>
+      <div className="flex items-center flex-column container">
         <button 
           className={styles.changeMood}
           style={{ borderColor: text_color, color: text_color }} 
           type='button' 
           value='change the mood'
+          araia-label="click to change mood"
           onClick={handleMood}
         > 
           change the mood
         </button>
-        <h1 className={`${styles.heading} text-center`}> Founded with the HOPE to CHANGE an ENTIRE INDUSTRY </h1>
+        <h1 className={`${styles.heading} text-center`}> 
+          Founded with the HOPE to MAKE an IMPACT through CREATIVITY
+        </h1>
         <div className={`${styles.sayingHello} flex flex-column items-start`}>
           <p className='flex items-end'> 
             <span className='d-block' style={{ backgroundColor: text_color }}></span> 
@@ -61,7 +61,7 @@ function About({ handleMood, mood }) {
           </div>
         </div>
         <p className='text-center'>
-          Zahra Kaabi is a YOUNG Front-end Developer and a UI Web Designer GIRL. “I always loved the combination of 
+          Zahra Kaabi is a Front-end Developer and a UI Web Designer. “I always loved the combination of 
           design and web development, and i always wished to get involved and adding value to a website” SHE SAID.
         </p>
         <div className={`${styles.packageWrapper} w-screen`}>
@@ -85,7 +85,7 @@ function About({ handleMood, mood }) {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

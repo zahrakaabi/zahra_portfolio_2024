@@ -4,10 +4,12 @@
 /*                                DEPENDENCIES                                */
 /* -------------------------------------------------------------------------- */
 // Packages
-import Link from 'next/link';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+
+// UI Local Components
+import Magnetic from '../magnetic';
 
 // Styles
 import styles from './index.module.scss';
@@ -17,40 +19,51 @@ import styles from './index.module.scss';
 /* -------------------------------------------------------------------------- */
 function Project({ project }) {
 /* ---------------------------------- HOOKS --------------------------------- */
-  const [isActive, setIsActive] = useState(false);
+  const [cursor, setCursor] = useState({
+    index: 0,
+    hovered: false
+  });
+  const route = useRouter();
 
 /* -------------------------------- CONSTANTS ------------------------------- */
-  const { src, title, image } = project;
-  const anim = {
-    initial: {width: 0, height: 0},
-    open: {width: "auto", height: "auto", transition: {duration: 0.4, ease: [0.23, 1, 0.32, 1]}},
-    closed: {width: 0}
-  }
+  const { $id, title_1, title_2, details, color, image } = project;
+  const { index, hovered } = cursor;
 
 /* -------------------------------- RENDERING ------------------------------- */
   return (
-    <Link 
-        className={`${styles.project} flex items-center justify-center pointer`}
-        href={src}
-        target='_blank'
-        onMouseEnter={() => setIsActive(true)} 
-        onMouseLeave={() => setIsActive(false)} 
-    >
-        <p>{title}</p>
-        <motion.div 
-            variants={anim} 
-            animate={isActive ? "open" : "closed"} 
-            className={`${styles.imgContainer} flex justify-center`}
-        >
-            <Image 
-                src={`/images/projects/${image}`}
-                width={250}
-                height={0}
-                alt="project image"   
-            />
-        </motion.div>
-        <p>{title}</p>
-    </Link>
+    <div className={styles.project}>
+      <div 
+        className={`${styles.imgContainer} flex items-center justify-center pointer pos-r`} 
+        style={{background: color}}
+        onMouseEnter={() => setCursor({index: $id, hovered: true})}
+        onMouseLeave={() => setCursor({index: $id, hovered: false})}
+      >
+        <Image 
+          className='center'
+          src={`/images/projects/${image}`}
+          width={250}
+          height={300}
+          alt={`${title_1}${title_2}`}   
+        />
+        {hovered && index === $id && (
+          <Magnetic>
+            <div className={`${styles.magneticContainer} flex items-center justify-center pointer`}>
+              <div className={`${styles.arrow} flex justify-center items-center`}
+                aria-label="Click to view project"
+                role="button"
+                onClick={() => route.push(`/work/${$id}`)}
+              >
+                &#129109;
+              </div>
+            </div>
+          </Magnetic>
+        )}
+      </div>
+      <div className={`${styles.contentContainer} flex justify-between items-center`}>
+        <h3>{title_1}{title_2}</h3>
+        <p>({details})</p>
+      </div>
+    </div>
   )
 }
 

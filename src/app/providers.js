@@ -19,7 +19,10 @@ function Providers({ children }) {
 
    if (!mounted) {
     return <> {children} </>
-   } return <ThemeProvider> {children} </ThemeProvider>
+   } 
+   
+/* -------------------------------- RENDERING ------------------------------- */
+   return <ThemeProvider> {children} </ThemeProvider>
 };
 
 export default Providers;

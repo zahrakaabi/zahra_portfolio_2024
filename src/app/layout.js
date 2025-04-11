@@ -8,13 +8,13 @@ import Head from 'next/head';
 import { usePathname } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 
-// UI Local Components
-import Footer from '@/shared/footer';
-import Header from '@/shared/header';
-import About from '@/components/about-page-components';
+// _Mocks
+import { MOOD_OPTIONS } from '@/_mock';
 
-// _hepers
-import { MOOD_OPTIONS } from '../_helpers/_APIs/_mood-options';
+// UI Local Components
+import Header from '@/layout/header';
+import Footer from '@/layout/footer';
+import About from '@/components/about-page-components';
 
 // Styles
 import '../shared/styles/styles.globals.scss';
@@ -24,19 +24,25 @@ import styles from '../components/about-page-components/index.module.scss';
 /*                     COMPONENT                    */
 /* ------------------------------------------------ */
 function RootLayout({ children }) {
-  const storedMoodIndex = localStorage.getItem('moodIndex');
-  const INITIAL_MOOD_INDEX = storedMoodIndex ? parseInt(storedMoodIndex, 10) : 0
   /* ------------------- HOOKS -------------------- */ 
   const pathname = usePathname();
-  const [moodIndex, setMoodIndex] = useState(INITIAL_MOOD_INDEX);
+  const [moodIndex, setMoodIndex] = useState(0);
 
-  const isAboutPage = pathname === '/about';
+  useEffect(() => {
+    const storedMood = localStorage.getItem('moodIndex');
+    if (storedMood) {
+      setMoodIndex(parseInt(stored, 10));
+    }
+  }, []);
 
   useEffect(() => {
     localStorage.setItem('moodIndex', moodIndex);
   }, [moodIndex]);
 
   /* ----------------- CONSTANTS ----------------- */ 
+  const isAboutPage = pathname === '/about';
+  const isContactPage = pathname === '/contact';
+
   const handleMood = () => {
     const imageContainer = document.querySelector(`.${styles.imageContainer}`);
     imageContainer.classList.add('fade-out');
@@ -57,6 +63,7 @@ function RootLayout({ children }) {
       <body>
         <Header
           isAboutPage={isAboutPage}
+          isContactPage={isContactPage}
           mood={MOOD_OPTIONS[moodIndex]}
         />
         <main>

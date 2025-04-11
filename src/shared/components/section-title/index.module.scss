@@ -2,14 +2,11 @@
 @import '../../styles/styles.variables.scss';
 
 .sectionTitle {
-    margin-bottom: $__seperat_text;
+    margin-bottom: 2%;
 
     h6 {
-        opacity: 0.4;
-        text-transform: uppercase;
-        font-size: 1.2rem;
-        font-weight: 400;
-        @include fontStylePrimary;
+        opacity: .6;
         color: $section-title-clr;
+        font: normal 400 2rem sans-serif;
     }
 }

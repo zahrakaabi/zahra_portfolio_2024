@@ -2,9 +2,10 @@
 /*                    DEPENDENCIES                  */
 /* ------------------------------------------------ */
 // UI Local Components
-import HeroSection from '../components/landing-page-components/hero-section';
-import AboutMeSection from '@/components/landing-page-components/about-me-section';
-import SelectedWorkSection from '../components/selected-work-section';
+import AboutMeSection from "@/components/home-page-components/about-me-section";
+import HeroSection from "@/components/home-page-components/hero-section";
+import SelectedDesignSection from "@/components/home-page-components/selected-design-section";
+import SelectedWorkSection from "@/components/home-page-components/selected-work-section";
 
 /* ------------------------------------------------ */
 /*                     COMPONENT                    */
@@ -16,6 +17,7 @@ function Home() {
       <HeroSection />
       <AboutMeSection />
       <SelectedWorkSection />
+      <SelectedDesignSection />
     </>
   );
 }

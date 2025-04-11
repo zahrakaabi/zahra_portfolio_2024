@@ -1,0 +1,70 @@
+@import '../../../shared/styles/styles.mixins.scss';
+@import '../../../shared/styles/styles.variables.scss';
+
+.heroContainer {
+    min-height: 86vh;
+
+    .heroContent {
+        span:last-child {
+            font-size: 2rem;
+            font-weight: 400;
+            @include fontStylePrimary;
+        }
+
+        .heroText {
+            span {
+                font-size: 6vw;
+                font-weight: bold;
+                line-height: 0.9;
+                @include fontStylePrimary;
+
+                &.indent {
+                    padding-left: 7vw;
+                    display: inline-block;
+                }
+
+                .ctaBtns {
+                    button {
+                        margin-left: 2.7rem;
+        
+                        &:first-of-type {
+                            width: 18rem;
+                            height: 18rem;
+                            border-radius: 50%;
+                            color: $theme-light-clr;
+                            background: $__btn-bg-clr;
+        
+                            span {
+                                font-size: 1.6rem;
+                                font-weight: 400;
+                                @include fontStylePrimary;
+                                line-height: 1.5
+                            }
+                        }
+        
+                        &:last-of-type {
+                            font-size: 2rem;
+                            font-weight: 400;
+                            @include fontStylePrimary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .scrollDown {
+        position: absolute;
+        bottom: 3rem;
+        
+        h6 {
+            opacity: 0.6;
+            letter-spacing: 0.1rem;
+            font: normal 400 1.6rem sans-serif;
+
+            span {
+                color: $__color-text;
+            }
+        }
+    }
+}

@@ -1,0 +1,97 @@
+.contactWrapper {
+    color: white;
+    background-color: #333;
+    padding-block: 20rem;
+    border-bottom: 1px solid #666666;
+
+    .contactContainer {
+        padding-inline: 11vw;
+
+        h1 {
+            font: normal 450 calc(clamp(5.12em, 7vw, 12.8em)* 0.875) sans-serif;
+            line-height: 1.065;
+
+            span {
+                display: block;
+            }
+        }
+
+        .arrow {
+            width: 83%;
+            padding-top: 5vh;
+            margin-bottom: 7vh;
+        }
+
+        .form {
+            width: 73%;
+            padding-right: clamp(4.5em, 8vw, 12.8em);
+
+            form {
+                gap: 3.2rem;
+
+                .fieldWrapper {
+                    .fielLabel {
+                        display: block;
+                        margin-bottom: 0.5rem;
+
+                        font: normal 400 1.8rem sans-serif;
+                        line-height: 1.6;
+                    }
+
+                    .contactField {
+                        width: 100%;
+                        outline: none;
+                        background-color: transparent;
+                        border: 0 solid white;
+                        border-bottom-width: 1px;
+
+                        padding: 0.5rem 0 2rem 0;
+                        margin-block: 1.2rem 0;
+
+                        font: normal 400 1.6rem sans-serif; 
+                        line-height: 1.4;
+                    }
+
+                    textarea {
+                        min-height: 20vh;
+                    }
+
+                    input,
+                    textarea {
+                        &::placeholder {
+                            font: normal 400 1.6rem sans-serif;
+                        }
+                    }
+                }
+            }
+        }
+
+        .contacts {
+            width: 27%;
+            padding-left: clamp(4.5em, 8vw, 12.8em);
+            
+            h5 {
+                text-transform: uppercase;
+                font: normal 450 1rem sans-serif;
+                letter-spacing: .05em;
+                line-height: 1.065;
+
+                margin-bottom: 1em;
+                opacity: .5;
+            }
+
+            ul {
+                padding-bottom: 2.5em;
+
+                li {
+                    height: 3.6rem;
+                }
+
+                li, li a {
+                    text-decoration: none;
+                    font: normal 400 1.6rem sans-serif;
+                }
+            }
+        }
+    }
+}

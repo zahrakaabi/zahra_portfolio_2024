@@ -2,9 +2,11 @@
 $theme-light-clr: #ffffff;
 $theme-dark-clr: #1C1D20;
 
-$primary-clr: #1C1D20;
+//$primary-clr: #1C1D20;
+$primary-clr: #333;
 
-$__color-text: #1C1D20;
+//$__color-text: #1C1D20;
+$__color-text: #333;
 
 $section-title-clr: $__color-text;
 
@@ -17,4 +19,5 @@ $__seperat_text: 2rem;
 
 // Hero section
 $__header-height: 4em;
-$__btn-bg-clr: #1C1D20;
+$__btn-bg-clr: #333;
+//$__btn-bg-clr: #1C1D20;
